@@ -18,7 +18,7 @@ coverage.*
 profile.cov
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
 
 # Go workspace file
 go.work
@@ -28,5 +28,34 @@ go.work.sum
 .env
 
 # Editor/IDE
-# .idea/
-# .vscode/
+.idea/
+.vscode/
+
+# Logs
+chat-ui/logs
+*.log
+chat-ui/npm-debug.log*
+chat-ui/yarn-debug.log*
+chat-ui/yarn-error.log*
+chat-ui/pnpm-debug.log*
+chat-ui/lerna-debug.log*
+
+chat-ui/node_modules
+chat-ui/dist
+chat-ui/dist-ssr
+chat-ui/.gitignore
+chat-ui/package-lock.json
+chat-ui/README.md
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
