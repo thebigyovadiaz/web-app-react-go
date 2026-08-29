@@ -12,7 +12,7 @@ export const MessagesPanel = ({ selectedChannel }) => {
         let intervalId = null;
 
         const fetchMessages = async () => {
-            const response = await fetch(`/messages?channelID=${selectedChannel.id}`);
+            const response = await fetch(`/messages?channelID=${selectedChannel.id}`,{credentials: "include",});
             const data = await response.json();
             if (isMounted) {
                 let messageData = data || [];
@@ -30,6 +30,7 @@ export const MessagesPanel = ({ selectedChannel }) => {
             if (lastMessageIdRef.current !== null) {
                 fetch(
                     `/messages?channelID=${selectedChannel.id}&lastMessageID=${lastMessageIdRef.current}`,
+                    {credentials: "include",}
                 )
                     .then((response) => response.json())
                     .then((newMessages) => {

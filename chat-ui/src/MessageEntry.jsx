@@ -15,6 +15,7 @@ export const MessageEntry = ({ selectedChannel, onNewMessage }) => {
                 user_id: parseInt(userID),
                 text,
             }),
+            credentials: "include",
         });
 
         if (response.ok) {
