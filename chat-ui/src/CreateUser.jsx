@@ -13,6 +13,7 @@ export const CreateUser = () => {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username, password }),
+            credentials: "include",
         });
 
         if (response.ok) {

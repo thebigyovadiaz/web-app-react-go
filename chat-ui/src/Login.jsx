@@ -11,8 +11,9 @@ export const Login = () => {
 
         const response = await fetch("/login", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${localStorage.getItem("token")}` },
             body: JSON.stringify({ username, password }),
+            credentials: "include",
         });
 
         if (response.ok) {

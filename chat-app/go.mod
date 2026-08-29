@@ -3,6 +3,7 @@ module github.com/thebigyovadiaz/web-app-react-go/chat-app
 go 1.26.1
 
 require (
+	github.com/gin-contrib/cors v1.7.7
 	github.com/gin-gonic/gin v1.12.0
 	github.com/glebarez/go-sqlite v1.23.0
 )

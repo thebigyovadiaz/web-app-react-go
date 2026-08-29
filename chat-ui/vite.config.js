@@ -8,4 +8,25 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
+  server: {
+    port: 3000,
+    proxy: {
+      '/users': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+      },
+      '/channels': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+      },
+      '/messages': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+      },
+      '/login': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+      },
+    }
+  }
 })

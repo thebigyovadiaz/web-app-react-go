@@ -19,7 +19,7 @@ export const ChannelsList = ({ selectedChannel, setSelectedChannel }) => {
 
     useEffect(() => {
         const fetchChannels = async () => {
-            const response = await fetch("/channels");
+            const response = await fetch("/channels", {credentials: "include",});
             const data = await response.json();
             setChannels(data || []);
         };
